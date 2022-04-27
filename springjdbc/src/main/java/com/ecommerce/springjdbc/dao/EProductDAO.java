@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
-import com.ecommerce.springjdbc.entity.EProductEntity;
+import com.ecommerce.springjdbc.entity.EproductEntity;
 
 public class EProductDAO {
 
@@ -20,10 +20,10 @@ public class EProductDAO {
 	}
 
 
-    public List<EProductEntity> getProducts(){    
-        return jdbcTemplate.query("select * from eproduct",new RowMapper<EProductEntity>(){    
-            public EProductEntity mapRow(ResultSet rs, int row) throws SQLException {    
-                    EProductEntity e=new EProductEntity();    
+    public List<EproductEntity> getProducts(){    
+        return jdbcTemplate.query("select * from eproduct",new RowMapper<EproductEntity>(){    
+            public EproductEntity mapRow(ResultSet rs, int row) throws SQLException {    
+                    EproductEntity e=new EproductEntity();    
                 e.setID(rs.getInt(1));    
                 e.setName(rs.getString(2));    
                 e.setPrice(rs.getBigDecimal(3));    

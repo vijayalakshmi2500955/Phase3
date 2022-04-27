@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ecommerce.springjdbc.dao.EProductDAO;
-import com.ecommerce.springjdbc.entity.EProductEntity;
+import com.ecommerce.springjdbc.entity.EproductEntity;
 
 @Controller
 public class MainController {
@@ -24,7 +24,7 @@ public class MainController {
 
 			System.out.println("Main Controller");
 
-			List<EProductEntity> productList = dao.getProducts();
+			List<EproductEntity> productList = dao.getProducts();
 
 				model.addAttribute("productList", productList);
 
